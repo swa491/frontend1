@@ -1,0 +1,63 @@
+<html>
+    <html></html>
+    <body>
+        
+           Number1:<input type="text" id="txt1" /><br><br>
+                Number2:<input type="text" id="txt2" /><br><br>
+                <input type="hidden" id="btnADD" value=1/> 
+                <input type="button" id="btnADD"onclick="Operation()" value="addition">
+                <input type="hidden" id="btnSUB" value=2/>
+                <input type="button" id="btnSUB"onclick="Operation()" value="Subtraction"/><br><br>
+                <input type="hidden" id="btnMUL" value=3/>
+                <input type="button" id="btnMUL" onclick="Operation()"value="Multiplication"/>
+                <input type="hidden" id="btnDIV" value=4/>
+                <input type="button" id="btnDIV"onclick="Operation()" value="Division"/>   
+        <script>
+           function Operation(operand) 
+{ 
+                                
+
+        var f = parseInt(document.getElementById('txt1').value);
+        var s = parseInt(document.getElementById('txt2').value);
+        
+        var nb1 = parseInt(document.getElementById('btnADD').value);
+        var nb2 = parseInt(document.getElementById('btnSUB').value);
+        var nb3 = parseInt(document.getElementById('btnMUL').value);
+        var nb4 = parseInt(document.getElementById('btnDIV').value);
+      var nbs1= parseInt(f)+parseInt(s);
+      var nbs2= parseInt(f)-parseInt(s);
+      var nbs3= parseInt(f)*parseInt(s);
+      var nbs4= parseInt(f)/parseInt(s); 
+
+        window.alert(nb1);
+        window.alert(nb2);
+        window.alert(nb3);
+        window.alert(nb4);
+        window.alert(nbs1);
+        window.alert(nbs2);
+        window.alert(nbs3);
+        window.alert(nbs4);
+
+
+
+        var result = nb1;
+        var result = nb2;
+        var result = nb3;
+        var result = nb4;
+        
+        switch( result)
+        {
+
+case 1 :      result = ( (x, y, z) => {  return x + y; } )( f, s);break;
+case 2 :      result = ( (x, y) => {  return x - y; } )( f, s );break;
+case 3 :      result = ( (x, y) => {  return x * y; } )( f, s );break;
+case 4 :      result = ( (x, y) => {  return x / y; } )( f, s );break;
+        }
+                                
+   window.alert(result);
+   console.log(result);
+} 
+
+        </script>
+    </body>
+</html>
